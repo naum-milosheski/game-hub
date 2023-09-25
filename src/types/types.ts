@@ -16,3 +16,13 @@ export interface FetchGamesResponseType {
   count: number;
   results: GameType[];
 }
+
+export interface GenreType {
+  id: number;
+  name: string;
+}
+
+export interface FetchGenresResponseType {
+  count: number;
+  results: GenreType[];
+}
