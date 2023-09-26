@@ -27,9 +27,3 @@ export interface FetchGenresResponseType {
   count: number;
   results: GenreType[];
 }
-
-export interface PlatformType {
-  id: number;
-  name: string;
-  slug: string;
-}
