@@ -1,19 +1,16 @@
-import { GameType, GenreType, Platform } from "../types/types";
+import { GameQuery, GameType, GenreType, Platform } from "../types/types";
 import useData from "./useData";
 
-const useGames = (
-  selectedGenre: GenreType | null,
-  selectedPlatform: Platform | null
-) =>
+const useGames = (gameQuery: GameQuery) =>
   useData<GameType>(
     "/games",
     {
       params: {
-        genres: selectedGenre?.id,
-        platforms: selectedPlatform?.id,
+        genres: gameQuery.genre?.id,
+        platforms: gameQuery.platform?.id,
       },
     },
-    [selectedGenre?.id, selectedPlatform?.id]
+    [gameQuery]
   );
 
 export default useGames;

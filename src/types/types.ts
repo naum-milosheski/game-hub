@@ -27,3 +27,8 @@ export interface FetchGenresResponseType {
   count: number;
   results: GenreType[];
 }
+
+export interface GameQuery {
+  genre: GenreType | null;
+  platform: Platform | null;
+}
