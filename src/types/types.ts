@@ -1,4 +1,4 @@
-export interface  Platform {
+export interface Platform {
   id: number;
   name: string;
   slug: string;
@@ -37,5 +37,6 @@ export interface GameQuery {
 
 export interface FetchResponse<T> {
   count: number;
+  next: string | null;
   results: T[];
 }
