@@ -29,8 +29,8 @@ export interface FetchGenresResponseType {
 }
 
 export interface GameQuery {
-  genre: GenreType | null;
-  platform: Platform | null;
+  genreId?: number;
+  platformId?: number;
   sortOrder: string;
   searchText: string;
 }
