@@ -49,3 +49,10 @@ export interface FetchResponse<T> {
   next: string | null;
   results: T[];
 }
+
+export interface Trailer {
+  id: number;
+  name: string;
+  preview: string;
+  data: { 480: string; max: string };
+}
